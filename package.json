@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "@types/react-lottie": "^1.2.6",
+    "@types/styled-components": "^5.1.15",
     "ethers": "^5.5.1",
     "ethers-typescript-typings": "^0.0.4",
     "react-lottie": "^1.2.3"

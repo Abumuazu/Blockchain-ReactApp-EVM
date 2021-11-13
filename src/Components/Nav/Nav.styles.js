@@ -11,6 +11,9 @@ padding:5px 70px 3px 70px;
 background-color: white;
 height: 10vh;
 box-shadow: 0 20px 25px rgb(189 206 212 / 20%);
+@media only screen and (max-width: 600px){
+  padding:5px 20px 3px 20px;
+}
 
 .btn-7 {
     background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);

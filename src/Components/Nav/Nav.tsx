@@ -1,8 +1,6 @@
-import React, {FC, useEffect, useState} from 'react';
+import  { useEffect, useState} from 'react';
 import {Balance, ConnectButton, Wrapper} from "./Nav.styles";
 import Web3 from 'web3';
-import {ethers} from 'ethers';
-import { ErrorMessage } from '../ErrorMessage';
 interface INav{
     Acctbalance: string;
     Connect: string;
@@ -27,8 +25,6 @@ const Nav = (props:GetAcct) => {
     const [errorMessage, setErrorMessage] = useState("");
 	const [defaultAccount, setDefaultAccount] = useState("");
 	const [userBalance, setUserBalance] = useState(0);
-	const [connButtonText, setConnButtonText] = useState('Connect Wallet');
-	const [provider, setProvider] = useState<string>("") ;
     const [isWeb3Installed, setIsWeb3Installed] = useState(false);
     const [isMetaMask, setIsMetaMask] = useState(false);
     const [formattedAcct, setFormattedAcct] = useState("");

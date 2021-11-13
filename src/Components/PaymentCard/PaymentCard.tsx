@@ -35,7 +35,7 @@ declare global {
     const sendEther = async (e:any) => {
      try{
       e.preventDefault();
-      setLoading(true)
+     
       // Check if wallet is connected
       if(account === ""){
         throw new Error ("Please connect wallet");
@@ -55,7 +55,7 @@ declare global {
       if(isNaN(amt)) throw new Error  ("Please type in a number value")
       
       if(amt <= 0) throw new Error  ("Eth amount must be greater than zero")
-
+      setLoading(true)
       const gasPrice = await window.web3.eth.getGasPrice();
       const txParameters = {
           from: account,
@@ -222,25 +222,3 @@ declare global {
   );
 }
 
-
-// const startPayment = async (props: IPay) => {
-//     try {
-//       if (!window.ethereum)
-//         throw new Error("No crypto wallet found. Please install it.");
-  
-//       await window.ethereum!.send!("eth_requestAccounts");
-//       const provider = new ethers.providers.Web3Provider(window.ethereum);
-//       const signer = provider.getSigner();
-//       ethers.utils.getAddress(props.addr);
-//       const tx = await signer.sendTransaction({
-//         to: props.addr,
-//         value: ethers.utils.parseEther(props.ether)
-//       });
-//       console.log(props.ether  );
-//       console.log(props.addr)
-//       console.log("tx", tx);
-//       props.setTxs([tx]);
-//     } catch (err:any) {
-//       props.setError(err.message);
-//     }
-// }
