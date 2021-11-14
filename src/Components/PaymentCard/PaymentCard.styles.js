@@ -85,7 +85,6 @@ ul li {
   width: 100%;
   padding: 30px 0;
   border-radius: 5px;
-  box-shadow: 23px 27px 28px -20px rgba(0, 0, 0, 0.75);
   height: fit-content;
   min-height: 670px;
 

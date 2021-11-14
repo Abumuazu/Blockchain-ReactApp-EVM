@@ -4,7 +4,6 @@ import detectEthereumProvider from '@metamask/detect-provider';
 import {ErrorMessage} from "../ErrorMessage";
 import { SendButton, Wrapper } from "./PaymentCard.styles";
 import Loading from "../Loading/loading";
-import loading from "../Loading/loading";
 import { Acct } from "../../Interfaces";
 
 
