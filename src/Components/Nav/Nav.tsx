@@ -1,20 +1,7 @@
 import  { useEffect, useState} from 'react';
 import {Balance, ConnectButton, Wrapper} from "./Nav.styles";
 import Web3 from 'web3';
-interface INav{
-    Acctbalance: string;
-    Connect: string;
-}
-
-declare global {
-    interface Window {
-        web3:any
-        ethereum?: any
-    }
-}	
-	interface GetAcct {
-        getAcct: Function
-    }
+import { GetAcct } from '../../Interfaces';
 
 // Network ID
 const netID = 3;
@@ -167,6 +154,9 @@ const Nav = (props:GetAcct) => {
 export default Nav
 
 
-
-
-
+declare global {
+    interface Window {
+         web3:any
+         ethereum?: any
+     }
+ }

@@ -13,8 +13,8 @@ function Transaction() {
 
     return (
        <Wrapper>
-               <Nav getAcct={getAcct} />
-               <Payment acct={acct}/>
+               <Nav  getAcct={getAcct} />
+               <Payment  acct={acct}/>
 
        </Wrapper>
     )

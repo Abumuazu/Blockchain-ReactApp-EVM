@@ -1,8 +1,7 @@
 import {FC} from "react"
 import styled from "styled-components"
-interface IError {
-    message: string | undefined;
-}
+import { IError } from "../Interfaces";
+
 
 
   export const ErrorMessage: FC<IError> = ({message}) => {
@@ -17,6 +16,8 @@ interface IError {
     );
   }
 
+
+  
   const Wrapper = styled.div`
   background-color: white;
   border-radius: 10px;

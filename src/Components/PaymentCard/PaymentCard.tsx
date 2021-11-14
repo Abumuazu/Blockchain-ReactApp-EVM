@@ -5,17 +5,11 @@ import {ErrorMessage} from "../ErrorMessage";
 import { SendButton, Wrapper } from "./PaymentCard.styles";
 import Loading from "../Loading/loading";
 import loading from "../Loading/loading";
+import { Acct } from "../../Interfaces";
 
-declare global {
-    interface Window {
-      
-        web3: any;
-    }
-}
 
- interface Acct {
-  acct:string
- }
+
+ 
 
  // Network ID
  const netID = 3;
@@ -156,7 +150,7 @@ declare global {
       <div className="left">
       <div style={{color: success ? "green": "red", padding:'20px'}} className="img">
           {error && 
-               <ErrorMessage message={errorMsg} />
+               <ErrorMessage  message={errorMsg} />
           }               
 
           {success && txs && <a target="_blank" style={{display: showLink ? "block" : "none", color: "green"}} rel="noreferrer"  href={`https://ropsten.etherscan.io/tx/${txs}`}>Click here to view Transaction status</a>}
